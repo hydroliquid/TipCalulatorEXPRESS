@@ -15,11 +15,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipPercent: UISegmentedControl!
     
+    let defualts = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("appeared")
+        
+        let currentPercentage = defualts.integer(forKey: "defualt")
+        tipPercent.selectedSegmentIndex = currentPercentage
+        
+    }
+    
+    
+    
     @IBAction func onTap(_ sender: Any) {
         print("hello")
         
@@ -40,6 +53,7 @@ class ViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
     }
+
     
 }
 

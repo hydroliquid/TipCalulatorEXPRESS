@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hhs-uC-Uga">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hhs-uC-Uga" userLabel="Total Boarder">
                                 <rect key="frame" x="20" y="438" width="180" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -33,7 +33,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-Yc-oJp">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSg-Yc-oJp" userLabel="Tip Boarder">
                                 <rect key="frame" x="214" y="302" width="180" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -48,7 +48,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-np-g96">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-np-g96" userLabel="Tip_Label_Boarder">
                                 <rect key="frame" x="20" y="302" width="180" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -141,7 +141,14 @@
                             <outletCollection property="gestureRecognizers" destination="z1c-RT-X33" appends="YES" id="xll-ne-eE1"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator EXPRESS" id="eyS-le-bde"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator EXPRESS" id="eyS-le-bde">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Jqi-Tf-Kbs">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <segue destination="OM8-rz-rhk" kind="push" id="es8-E2-fh9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="HCq-7Z-l7e" id="IvU-qW-xce"/>
                         <outlet property="tipLabel" destination="kUo-1c-HlP" id="Mev-ln-oKS"/>
@@ -157,6 +164,71 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="855.07246376811599" y="133.25892857142856"/>
+        </scene>
+        <!--EXPRESS Settings-->
+        <scene sceneID="bNK-ib-MDj">
+            <objects>
+                <viewController id="OM8-rz-rhk" customClass="SettingsViewController" customModule="TipCalulatorEXPRESS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U9z-Jm-bUt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BnC-fa-xOJ">
+                                <rect key="frame" x="87" y="110" width="240" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Defualt Percentage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuN-ey-VOD">
+                                        <rect key="frame" x="46" y="4" width="148" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLE-sS-Kou">
+                                <rect key="frame" x="20" y="146" width="374" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="SettingsPercent" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TkU-Ob-6f0">
+                                        <rect key="frame" x="8" y="14" width="358" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="15&amp;"/>
+                                            <segment title="18%"/>
+                                            <segment title="20%"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="DefualtTipPercentage:" destination="OM8-rz-rhk" eventType="valueChanged" id="EjK-uD-Lq4"/>
+                                            <action selector="DefualtTipPercentage:" destination="e8R-J4-Q9O" eventType="valueChanged" id="yMl-q1-c3F"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="IIw-2j-jWs"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DB2-jh-I3c" appends="YES" id="QHR-cB-4st"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="EXPRESS Settings" id="esq-Wu-xjL"/>
+                    <connections>
+                        <outlet property="defualtPercent" destination="TkU-Ob-6f0" id="AdS-Sm-isS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seS-NM-H2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="e8R-J4-Q9O" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="DB2-jh-I3c">
+                    <connections>
+                        <action selector="onTap:" destination="e8R-J4-Q9O" id="Ikb-W6-UAx"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1586.9565217391305" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rhS-Ia-pqD">
@@ -178,4 +250,5 @@
             <point key="canvasLocation" x="-84" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>
