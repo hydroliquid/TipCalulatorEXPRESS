@@ -32,6 +32,7 @@ Second Upload
 First Upload
 <img src='https://i.imgur.com/GRCJVCr.gif' title='Video Walkthrough 1' width='230' alt='Video Walkthrough' />
 
+GIF created with [Recordit](http://recordit.co/).
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
