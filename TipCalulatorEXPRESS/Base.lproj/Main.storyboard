@@ -168,7 +168,7 @@
         <!--EXPRESS Settings-->
         <scene sceneID="bNK-ib-MDj">
             <objects>
-                <viewController id="OM8-rz-rhk" sceneMemberID="viewController">
+                <viewController id="OM8-rz-rhk" customClass="SettingsViewController" customModule="TipCalulatorEXPRESS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U9z-Jm-bUt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,6 +200,7 @@
                                             <segment title="20%"/>
                                         </segments>
                                         <connections>
+                                            <action selector="DefualtTipPercentage:" destination="OM8-rz-rhk" eventType="valueChanged" id="EjK-uD-Lq4"/>
                                             <action selector="DefualtTipPercentage:" destination="e8R-J4-Q9O" eventType="valueChanged" id="yMl-q1-c3F"/>
                                         </connections>
                                     </segmentedControl>
@@ -215,6 +216,9 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="EXPRESS Settings" id="esq-Wu-xjL"/>
+                    <connections>
+                        <outlet property="defualtPercent" destination="TkU-Ob-6f0" id="AdS-Sm-isS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seS-NM-H2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="e8R-J4-Q9O" userLabel="Exit" sceneMemberID="exit"/>

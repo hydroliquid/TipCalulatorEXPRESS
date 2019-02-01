@@ -13,13 +13,20 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var defualtPercent: UISegmentedControl!
     
     let defualts = UserDefaults.standard
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("Appeared")
         saveSettings()
     }
+    
+    
     
     @IBAction func DefualtTipPercentage(_ sender: UISegmentedControl) {
         let currentPercentage = defualtPercent.selectedSegmentIndex
@@ -30,14 +37,16 @@ class SettingsViewController: UIViewController {
     }
     
     func saveSettings() {
-        let settingsDefualt = defualts.integer(forKey: "settingsDefualt")
+
+        var settingsDefualt = defualts.integer(forKey: "settingsDefualt")
+        settingsDefualt = 0
         defualtPercent.selectedSegmentIndex = settingsDefualt
         
+
         defualts.synchronize()
+        
     }
-    override func viewWillAppear(_ animated: Bool) {
-        saveSettings()
-    }
+
     /*
     // MARK: - Navigation
 
